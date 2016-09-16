@@ -207,7 +207,13 @@ static const NSUInteger kAlbumPreviewImageSize = 78;
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    [self updateSelectedFromPhotoViewController];
+    if (self.isMultiselectEnabled) {
+        // only remember selected photos from other album if enable multiple selection mode
+        [self updateSelectedFromPhotoViewController];
+    } else {
+        self.selected = nil;
+    }
+    
 }
 
 #pragma mark - UITableViewDataSource methods
@@ -276,7 +282,7 @@ static const NSUInteger kAlbumPreviewImageSize = 78;
 }
 
 - (void)photoViewController:(OLPhotoViewController *)photoController didDeSelectImage:(OLFacebookImage *)image{
-    [self updateSelectedFromPhotoViewController];
+    //[self updateSelectedFromPhotoViewController];
 }
 
 - (BOOL)photoViewController:(OLPhotoViewController *)photoController shouldSelectImage:(OLFacebookImage *)image{

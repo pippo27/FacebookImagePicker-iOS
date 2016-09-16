@@ -83,9 +83,8 @@ static NSString *const kSupplementaryViewFooterReuseIdentifier = @"co.oceanlabs.
         [selectedItems addObject:image];
     }
     
-    if (self.isMultiselectEnabled) {
-        [selectedItems addObjectsFromArray:self.selectedImagesInFuturePages];
-    }
+    [selectedItems addObjectsFromArray:self.selectedImagesInFuturePages];
+    
     return selectedItems;
 }
 
