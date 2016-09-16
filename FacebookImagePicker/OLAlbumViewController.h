@@ -14,6 +14,7 @@
 @protocol OLAlbumViewControllerDelegate <NSObject>
 - (void)albumViewControllerDoneClicked:(OLAlbumViewController *)albumController;
 - (void)albumViewController:(OLAlbumViewController *)albumController didFailWithError:(NSError *)error;
+- (void)albumViewControllerCancelClicked:(OLAlbumViewController *)albumController;
 @optional
 - (void)albumViewController:(OLAlbumViewController *)albumController didSelectImage:(OLFacebookImage *)image;
 - (BOOL)albumViewController:(OLAlbumViewController *)albumController shouldSelectImage:(OLFacebookImage *)image;

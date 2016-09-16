@@ -96,6 +96,8 @@ static const NSUInteger kAlbumPreviewImageSize = 78;
     
     if (self.shouldDisplayLogoutButton) {
         [self addLogoutButtonAnimated:NO];
+    } else {
+        self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel target:self action:@selector(cancelButtonClicked)];
     }
     
     self.albumRequestForNextPage = [[OLFacebookAlbumRequest alloc] init];
@@ -199,6 +201,10 @@ static const NSUInteger kAlbumPreviewImageSize = 78;
     [self.delegate albumViewControllerDoneClicked:self];
 }
 
+- (void)cancelButtonClicked{
+    [self.delegate albumViewControllerCancelClicked:self];
+}
+
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     [self updateSelectedFromPhotoViewController];
@@ -263,9 +269,6 @@ static const NSUInteger kAlbumPreviewImageSize = 78;
 }
 
 - (void)photoViewController:(OLPhotoViewController *)photoController didSelectImage:(OLFacebookImage *)image{
-    if(self.isMultiselectEnabled) {
-        [self updateSelectedFromPhotoViewController];
-    }
     
     if ([self.delegate respondsToSelector:@selector(albumViewController:didSelectImage:)]){
         [self.delegate albumViewController:self didSelectImage:image];

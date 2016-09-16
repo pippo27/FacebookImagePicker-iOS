@@ -83,8 +83,9 @@ static NSString *const kSupplementaryViewFooterReuseIdentifier = @"co.oceanlabs.
         [selectedItems addObject:image];
     }
     
-    [selectedItems addObjectsFromArray:self.selectedImagesInFuturePages];
-    
+    if (self.isMultiselectEnabled) {
+        [selectedItems addObjectsFromArray:self.selectedImagesInFuturePages];
+    }
     return selectedItems;
 }
 
@@ -210,13 +211,8 @@ static NSString *const kSupplementaryViewFooterReuseIdentifier = @"co.oceanlabs.
 }
 
 -(void) collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
-    if(self.isMultiselectEnabled) {
-        [self updateTitleWithSelectedIndexPaths:collectionView.indexPathsForSelectedItems];
+    [self updateTitleWithSelectedIndexPaths:collectionView.indexPathsForSelectedItems];
     
-    } else {
-        [collectionView deselectItemAtIndexPath:indexPath animated:NO];
-    }
-        
     if ([self.delegate respondsToSelector:@selector(photoViewController:didSelectImage:)]){
         [self.delegate photoViewController:self didSelectImage:[self.photos objectAtIndex:indexPath.item]];
     }
