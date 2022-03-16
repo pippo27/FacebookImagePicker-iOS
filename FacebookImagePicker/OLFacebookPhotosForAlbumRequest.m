@@ -58,7 +58,7 @@
             graphPath = [graphPath stringByAppendingFormat:@"&after=%@", self.after];
         }
         
-        FBSDKGraphRequest *request = [[FBSDKGraphRequest alloc] initWithGraphPath:graphPath];
+        FBSDKGraphRequest *request = [[FBSDKGraphRequest alloc] initWithGraphPath:graphPath parameters: @{}];
         [request startWithCompletion:^(id<FBSDKGraphRequestConnecting> connection, id result, NSError *error) {
             [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
             if (self.cancelled) {
