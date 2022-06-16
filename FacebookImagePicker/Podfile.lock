@@ -1,26 +1,30 @@
 PODS:
-  - FBSDKCoreKit (5.0.2):
-    - FBSDKCoreKit/Basics (= 5.0.2)
-    - FBSDKCoreKit/Core (= 5.0.2)
-  - FBSDKCoreKit/Basics (5.0.2)
-  - FBSDKCoreKit/Core (5.0.2):
-    - FBSDKCoreKit/Basics
-  - FBSDKLoginKit (5.0.2):
-    - FBSDKCoreKit (~> 5.0)
+  - FBAEMKit (14.0.0):
+    - FBSDKCoreKit_Basics (= 14.0.0)
+  - FBSDKCoreKit (14.0.0):
+    - FBAEMKit (= 14.0.0)
+    - FBSDKCoreKit_Basics (= 14.0.0)
+  - FBSDKCoreKit_Basics (14.0.0)
+  - FBSDKLoginKit (14.0.0):
+    - FBSDKCoreKit (= 14.0.0)
 
 DEPENDENCIES:
-  - FBSDKCoreKit (= 5.0.2)
-  - FBSDKLoginKit (= 5.0.2)
+  - FBSDKCoreKit (~> 14.0)
+  - FBSDKLoginKit (~> 14.0)
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
+  trunk:
+    - FBAEMKit
     - FBSDKCoreKit
+    - FBSDKCoreKit_Basics
     - FBSDKLoginKit
 
 SPEC CHECKSUMS:
-  FBSDKCoreKit: 3e41c402eb64ea7799c71833ff9e5690f27b9c42
-  FBSDKLoginKit: a88f36da648e4c5d60eb261c63eac067abb97130
+  FBAEMKit: d00064597439e75885c70d9adbcb5f3e9ad84f5d
+  FBSDKCoreKit: e5d3acfffe5063a9d0b967ba2ad1f5afc460cf43
+  FBSDKCoreKit_Basics: 1ff46a12e80f0b66e6c00e1ef32d6a5b5b9008a5
+  FBSDKLoginKit: dbe86ef42ab142f3bd0f1c904a21bb33f31c5569
 
-PODFILE CHECKSUM: 2ef87585636c7731a205d4ae1a1ac3178f4f52b0
+PODFILE CHECKSUM: 364573edbfd30fb543c921167718966cbde85ae7
 
-COCOAPODS: 1.6.1
+COCOAPODS: 1.11.3

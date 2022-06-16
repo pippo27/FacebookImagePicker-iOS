@@ -6,7 +6,7 @@ Pod::Spec.new do |s|
   s.author       = { "Deon Botha" => "deon@oceanlabs.co" }
   s.social_media_url = 'https://twitter.com/dbotha'
   s.homepage     = 'https://github.com/OceanLabs/FacebookImagePicker-iOS'
-  s.platform     = :ios, '7.0'
+  s.platform     = :ios, '12.0'
   s.requires_arc = true
   s.source = {
     :git => 'https://github.com/OceanLabs/FacebookImagePicker-iOS.git',
@@ -14,7 +14,7 @@ Pod::Spec.new do |s|
   }
   s.source_files = ['FacebookImagePicker/OL*.{h,m}', 'FacebookImagePicker/UIImageView+FacebookFadeIn.{h,m}']
   s.resources = ['FacebookImagePicker/FacebookImagePicker.xcassets', 'FacebookImagePicker/*.xib']
-  s.dependency 'FBSDKCoreKit', '~> 12.0'
-  s.dependency 'FBSDKLoginKit', '~> 12.0'
+  s.dependency 'FBSDKCoreKit', '~> 14.0'
+  s.dependency 'FBSDKLoginKit', '~> 14.0'
 
 end

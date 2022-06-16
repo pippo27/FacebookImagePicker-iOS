@@ -33,6 +33,8 @@
 	<string>1.0</string>
 	<key>FacebookAppID</key>
 	<string>189888614547873</string>
+	<key>FacebookClientToken</key>
+	<string>test</string>
 	<key>FacebookDisplayName</key>
 	<string>Image Picker</string>
 	<key>LSApplicationQueriesSchemes</key>
