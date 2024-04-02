@@ -11,7 +11,7 @@
 #import "OLFacebookAlbum.h"
 #import "OLPhotoViewController.h"
 #import "UIImageView+FacebookFadeIn.h"
-#import <FBSDKLoginKit/FBSDKLoginManager.h>
+#import <FBSDKLoginKit/FBSDKLoginKit.h>
 #import <FBSDKCoreKit/FBSDKAccessToken.h>
 #import <FBSDKCoreKit/FBSDKGraphRequest.h>
 
