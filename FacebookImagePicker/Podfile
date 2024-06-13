@@ -1,4 +1,4 @@
 target 'FacebookImagePicker' do
-    pod 'FBSDKCoreKit', '~> 14.0'
-    pod 'FBSDKLoginKit', '~> 14.0'
+  pod 'FBSDKCoreKit', '~> 17.0.2'
+  pod 'FBSDKLoginKit', '~> 17.0.2'
 end
